@@ -36,11 +36,4 @@
 #define iq31_oneTenth    0x0ccccccd
 #define iq31_one         0x7fffffff
 
-__STATIC_INLINE I32_IQ _FtoIQN(float input, U32_IQ qfmt)
-{
-    I32_IQ res;
-    res = input * (1 << qfmt);
-    return(res);
-}
-
 #endif //__SUPPORTH__
