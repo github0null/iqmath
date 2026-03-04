@@ -45,8 +45,8 @@ __STATIC_INLINE int_fast32_t __IQNdiv(int_fast32_t iqNInput1, int_fast32_t iqNIn
     uint_fast32_t uiqNInput2;
     uint_fast32_t uiqNResult;
     uint_fast64_t uiiqNInput1;
-    uint_fast16_t ui16IntState;
-    uint_fast16_t ui16MPYState;
+    __mpy_var_u16(ui16IntState);
+    __mpy_var_u16(ui16MPYState);
 
     if (type == TYPE_DEFAULT) {
         /* save sign of denominator */

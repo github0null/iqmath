@@ -34,8 +34,8 @@ int_fast16_t __IQNtoa(char *string, const char *format, int_fast32_t iqNInput, i
     int_fast16_t count;                  // conversion character counter
     uint_fast16_t ui16IntWidth;          // integer format width
     uint_fast16_t ui16FracWidth;         // fractional format width
-    uint_fast16_t ui16IntState;          // save interrupt state
-    uint_fast16_t ui16MPYState;          // save multiplier state
+    __mpy_var_u16(ui16IntState);          // save interrupt state
+    __mpy_var_u16(ui16MPYState);          // save multiplier state
     uint_fast32_t uiqNInput;             // unsigned input
     uint_fast32_t uiq32Fractional;       // working variable
     uint_fast32_t ui32Integer;           // working variable

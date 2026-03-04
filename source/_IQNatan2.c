@@ -72,8 +72,8 @@ __STATIC_INLINE int_fast32_t __IQNatan2(int_fast32_t iqNInputY, int_fast32_t iqN
 {
     uint8_t ui8Status = 0;
     uint8_t ui8Index;
-    uint_fast16_t ui16IntState;
-    uint_fast16_t ui16MPYState;
+    __mpy_var_u16(ui16IntState);
+    __mpy_var_u16(ui16MPYState);
     uint_fast32_t uiqNInputX;
     uint_fast32_t uiqNInputY;
     uint_fast32_t uiq32ResultPU;

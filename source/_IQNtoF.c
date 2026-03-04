@@ -9,6 +9,13 @@
 
 #include "../support/support.h"
 
+union _IQNtoF_CONV {
+    uint32_t u32;
+    int32_t i32;
+    float f32;
+};
+
+
 /**
  * @brief Converts IQN type to floating point.
  *
@@ -64,7 +71,9 @@ __STATIC_INLINE float __IQNtoF(int_fast32_t iqNInput, int8_t q_value)
     uiq23Result += (uint_fast32_t) ui16Exp << 16;
 
     /* Return the mantissa + exp + sign result as a floating point type. */
-    return *(float *) &uiq23Result;
+    union _IQNtoF_CONV r;
+    r.u32 = uiq23Result;
+    return r.f32;
 }
 
 /**

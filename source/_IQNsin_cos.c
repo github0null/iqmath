@@ -200,8 +200,8 @@ __STATIC_INLINE int_fast32_t __IQNsin_cos(int_fast32_t iqNInput, const int8_t q_
                                    const int8_t type, const int8_t format)
 {
     uint8_t ui8Sign = 0;
-    uint_fast16_t ui16IntState;
-    uint_fast16_t ui16MPYState;
+    __mpy_var_u16(ui16IntState);
+    __mpy_var_u16(ui16MPYState);
     uint_fast32_t uiq29Input;
     uint_fast32_t uiq30Input;
     uint_fast32_t uiq31Input;

@@ -33,8 +33,8 @@ __STATIC_INLINE int_fast32_t __IQNexp(int_fast32_t iqNInput, const uint_fast32_t
 {
     uint8_t ui8Count;
     int_fast16_t i16Integer;
-    uint_fast16_t ui16IntState;
-    uint_fast16_t ui16MPYState;
+    __mpy_var_u16(ui16IntState);
+    __mpy_var_u16(ui16MPYState);
     int_fast32_t iq31Fractional;
     uint_fast32_t uiqNResult;
     uint_fast32_t uiqNIntegerResult;

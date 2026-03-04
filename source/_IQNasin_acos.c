@@ -71,8 +71,8 @@ __STATIC_INLINE int_fast32_t __IQNasin(int_fast32_t iqNInput, const int8_t q_val
 {
     uint8_t ui8Status = 0;
     uint_fast16_t index;
-    uint_fast16_t ui16IntState;
-    uint_fast16_t ui16MPYState;
+    __mpy_var_u16(ui16IntState);
+    __mpy_var_u16(ui16MPYState);
     int_fast32_t iq29Result;
     const int_fast32_t *piq29Coeffs;
     uint_fast32_t uiq31Input;

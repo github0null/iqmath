@@ -3,6 +3,7 @@
 
 #include "cmsis_compiler.h"
 
+#define __mpy_var_u16(name)
 #define __mpy_start(dummy1, dummy2)
 #define __mpyf_start(dummy1, dummy2)
 #define __mpyfs_start(dummy1, dummy2)

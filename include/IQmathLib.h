@@ -705,13 +705,7 @@ extern float _IQ1toF(_iq1 A);
 #define _IQtoF(A)               _IQ1toF(A)
 #endif
 
-__STATIC_INLINE int_fast32_t _FtoIQN(float input, int qfmt)
-{
-    int_fast32_t res;
-    res = input * (1 << qfmt);
-    return(res);
-}
-#define _FtoIQ(F) _FtoIQN(F, GLOBAL_IQ)
+#define _FtoIQN(F, qfmt) (int32_t)((F) * (1 << (qfmt)))
 
 //*****************************************************************************
 //

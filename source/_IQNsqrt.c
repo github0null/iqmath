@@ -70,8 +70,8 @@ __STATIC_INLINE int_fast32_t __IQNsqrt(int_fast32_t iqNInputX, int_fast32_t iqNI
     uint8_t ui8Index;
     uint8_t ui8Loops;
     int_fast16_t i16Exponent;
-    uint_fast16_t ui16IntState;
-    uint_fast16_t ui16MPYState;
+    __mpy_var_u16(ui16IntState);
+    __mpy_var_u16(ui16MPYState);
     uint_fast32_t uiq30Guess;
     uint_fast32_t uiq30Result;
     uint_fast32_t uiq31Result;

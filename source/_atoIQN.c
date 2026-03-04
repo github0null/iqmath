@@ -25,8 +25,8 @@
 __STATIC_INLINE int_fast32_t __atoIQN(const char *string, int_fast32_t q_value)
 {
     uint8_t sgn;
-    uint_fast16_t ui16IntState;
-    uint_fast16_t ui16MPYState;
+    __mpy_var_u16(ui16IntState);
+    __mpy_var_u16(ui16MPYState);
     uint_fast32_t iqNResult;
     uint_fast32_t uiq0Integer = 0;
     uint_fast32_t uiq31Fractional = 0;
